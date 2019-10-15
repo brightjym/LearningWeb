@@ -8,9 +8,25 @@
       <h1><a href="index.html">WEB</a></h1>
       <h2>WEB</h2>
       <ol>
-        <li><a onclick="document.querySelector('article').innerHTML = '<h2>HTML</h2>HTML is ...';">HTML</a></li>
-        <li><a onclick="document.querySelector('article').innerHTML = '<h2>CSS</h2>CSS is...';">CSS</a></li>
-        <li><a onclick="document.querySelector('article').innerHTML = '<h2>JavaScript</h2>JavaScript is...';">JavaScript</a></li>
+        <li><a onclick="
+          fetch('html').then(function(response){
+            response.text().then(function(text){
+              document.querySelector('article').innerHTML = text;
+            })
+          });
+        ">HTML</a></li>
+        <li><a onclick="
+          fetch('css').then(function(response){
+            response.text().then(function(text){
+              document.querySelector('article').innerHTML = text;
+            })
+          });">CSS</a></li>
+        <li><a onclick="
+          fetch('javascript').then(function(response){
+            response.text().then(function(text){
+              document.querySelector('article').innerHTML = text;
+            })
+          });">JavaScript</a></li>
       </ol>
       <p><a href="https://www.w3.org/TR/html51/textlevel-semantics.html#the-a-element" title="html5 specification">World Wide Web or the Web, an Internet-based hypertext system
       <img src = "cording.jpg" width=100%>
