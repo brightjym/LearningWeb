@@ -22,6 +22,7 @@
           var items = text.split(',');
           var i = 0;
           var tags = '';
+          console.log(items);
           while(i<items.length) {
             var item = items[i];
             tags += '<li><a href=\"#!'+item+'\" onclick=\"fetchPage(\''+item+'\')\">'+item+'</a></li>'
