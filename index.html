@@ -16,15 +16,19 @@
       } else {
         fetchPage('welcome');
       }
+
+      fetch('list').then(function(response){
+        response.text().then(function(text){
+          document.querySelector('#nav').innerHTML = text;
+        })
+      })
       </script>
   </head>
   <body
       <h1><a href="#welcome">WEB</a></h1>
       <h2>WEB</h2>
-      <ol>
-        <li><a href="#!html" onclick="fetchPage('html')">HTML</a></li>
-        <li><a href="#!css" onclick="fetchPage('css')">CSS</a></li>
-        <li><a href="#!javascript" onclick="fetchPage('javascript')">JavaScript</a></li>
+      <ol id="nav">
+        
       </ol>
       <article>This</article>
   </body>
