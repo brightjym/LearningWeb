@@ -27,6 +27,7 @@
             tags += '<li><a href=\"#!'+item+'\" onclick=\"fetchPage(\''+item+'\')\">'+item+'</a><li>'
             i = i + 1;
           }
+          console.log(tags);
           document.querySelector('#nav').innerHTML = tags;
         })
       })
